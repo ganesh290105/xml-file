@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="bookstore.xsl"?>
+<!-- 
+  This is the XML document containing the list of books.
+  It is linked to the 'bookstore.xsd' schema for validation.
+  The 'xsi:noNamespaceSchemaLocation' attribute points to the XSD file.
+-->
+<bookstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="bookstore.xsd">
+  
+  <book id="bk101">
+    <title>Chhava</title>
+    <author>Shivaji Sawant</author>
+    <genre>Fiction</genre>
+    <price>120</price>
+  </book>
+  
+  <book id="bk102">
+    <title>Malgudi Daays</title>
+    <author>R.k.Narayan</author>
+    <genre>Fiction</genre>
+    <price>200</price>
+  </book>
+  
+  <book id="bk103">
+    <title>Ramayana</title>
+    <author>Rushi Walmiki</author>
+    <genre>Non-Fiction</genre>
+    <price>283</price>
+  </book>
+  
+  <book id="bk104">
+    <title>A Brief History of Time</title>
+    <author>Stephen Hawking</author>
+    <genre>Non-Fiction</genre>
+    <price>180</price>
+  </book>
+  
+  <book id="bk105">
+    <title>The Lord of the Rings</title>
+    <author>J.R.R. Tolkien</author>
+    <genre>Fantasy</genre>
+    <price>200</price>
+  </book>
+
+</bookstore>

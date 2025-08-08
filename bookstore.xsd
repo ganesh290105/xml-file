@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This is the XML Schema (XSD) for the bookstore.
+  It defines the structure and rules for the 'bookstore.xml' file.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definition for the root element: <bookstore> -->
+  <xs:element name="bookstore">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- The <bookstore> element can contain one or more <book> elements -->
+        <xs:element name="book" maxOccurs="unbounded" minOccurs="1" type="BookType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Definition for the <book> element and its children -->
+  <xs:complexType name="BookType">
+    <xs:sequence>
+      <!-- Defines the child elements that must appear within a <book> element -->
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="author" type="xs:string"/>
+      <xs:element name="genre" type="GenreType"/>
+      <xs:element name="price" type="xs:decimal"/>
+    </xs:sequence>
+    <!-- Defines the 'id' attribute for the <book> element -->
+    <xs:attribute name="id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <!-- Definition for the <genre> element's allowed values -->
+  <xs:simpleType name="GenreType">
+    <xs:restriction base="xs:string">
+      <!-- Restricts the genre to one of the following values -->
+      <xs:enumeration value="Fiction"/>
+      <xs:enumeration value="Non-Fiction"/>
+      <xs:enumeration value="Science Fiction"/>
+      <xs:enumeration value="Fantasy"/>
+      <xs:enumeration value="Mystery"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
